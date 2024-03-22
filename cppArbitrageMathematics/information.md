@@ -1,0 +1,27 @@
+# From the book: Freddy Delbaen, Walter Schachemayer - The mathematics of Arbitrage
+## 1 - The Story in a Nutshell
+### 1.1 Arbitrage
+The notion of arbitrage is crucial to the modern theory of Finance. It is the corner-stone of the option pricing theory 
+due to F. Black, Merton and M. Scholes [BS73], [M73] (published in 1973, honoured by the Nobel prize in Economics 1997).
+
+The idea of arbitrage is best explained by telling a joke: a professor working in mathematical Finance and a normal 
+person go on a walk and the normal person sees a 100EUR bill lying on the street. When the normal person 
+wants to pick it up, the profesor says: don't try to do that. it is absolutely impossible that there is a 100EUR bill lying 
+on the street. Indeed, if it were lying on the street, somebody else would have picked it up before you. (end of joke).
+
+How about financial markets? There it is already much more reasonable to assume that there are no arbitrage possibilities,
+i.e., that there are no 100EUR bills lying around and waiting to be picked up. Let us illustrate this with an easy 
+example.
+
+Consider the trading of USD versus EUR that takes place simultaneously at two exchanges, say in New York and Frankfurt.
+Assume for simplicity that in New York the USD/EUR rate is 1:1. Then it is quite obvious that in Frankfurt the
+exchange rate (at the same moment of time) also is 1:1. Let us have a closer look why this is the case. Suppose to the 
+contrary that you can buy in Frankfurt a USD for 0.999 EUR. Then, indeed, the so-called "arbitrageurs" (these are people 
+with two telephones in their hands and three screens in front of them) would quickly act to buy USD in Frankfurt and 
+simultaneously sell the same amount of USD in New York, keping th margin in their (or their's bank's) pocket. Note that
+thre is no normalizing factor in front of the exchanged amount and the arbitrageur would try to do this on a scale as large 
+as possible.
+
+This brings us to a first - informal and intuitive - definition of arbitrage: an arbitrage opportunity is the
+
+$x=12$
