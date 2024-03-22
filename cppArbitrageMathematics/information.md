@@ -22,6 +22,16 @@ simultaneously sell the same amount of USD in New York, keping th margin in thei
 thre is no normalizing factor in front of the exchanged amount and the arbitrageur would try to do this on a scale as large 
 as possible.
 
-This brings us to a first - informal and intuitive - definition of arbitrage: an arbitrage opportunity is the
+This brings us to a first - informal and intuitive - definition of arbitrage: an arbitrage opportunity is the possibility
+to make a profit in a financial market without risk and without net investment of capital. The principle of no-arbitrage 
+states that a mathematical model of a financial market should not allow for arbitrage possibilities.
 
-$x=12$
+### 1.2 An Easy Model of a Financial Market
+To apply this principle to less trivial cases than the Euro/Dollar example above, we consider a still extremely simple
+mathematical model of a financial market: there are two assets, called the bond and the stock. The bond is riskless,
+hence by definition we know what it is worth tomorrow. For (mainly notional) simplicity we neglect interest rates and 
+assume that the price of a bond equals 1 EUR today as well as tomorrow, i.e.,
+
+$$
+B_0=B_1=1
+$$
