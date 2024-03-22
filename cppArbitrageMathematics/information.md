@@ -35,3 +35,13 @@ assume that the price of a bond equals 1 EUR today as well as tomorrow, i.e.,
 $$
 B_0=B_1=1
 $$
+
+The more interesting feature of the model is the stock which is risky: we know its value today, say (w.l.o.g.)
+
+$$
+S_0=1
+$$
+
+but we don't know its value tomorrow. We model this uncertainty stochastically by defining $S_1$ to be a random variable 
+depending on the random element $\omega\in\Omega$. To keep things simple as possible, we let $\Omega$ consist of two 
+elements only, $g$ for "good" and $b$ for "bad", with probability $\textbf{P}[g]=\textbf{P}[b]=\frac{1}{2}$.
