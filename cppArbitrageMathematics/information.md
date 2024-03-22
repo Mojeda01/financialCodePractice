@@ -44,4 +44,13 @@ $$
 
 but we don't know its value tomorrow. We model this uncertainty stochastically by defining $S_1$ to be a random variable 
 depending on the random element $\omega\in\Omega$. To keep things simple as possible, we let $\Omega$ consist of two 
-elements only, $g$ for "good" and $b$ for "bad", with probability $\textbf{P}[g]=\textbf{P}[b]=\frac{1}{2}$.
+elements only, $g$ for "good" and $b$ for "bad", with probability $\textbf{P}[g]=\textbf{P}[b]=\frac{1}{2}$. We define 
+$S_1(\omega)$ by
+
+$$
+S_1(\omega) = 
+\begin{cases}
+2 & \text{for } \omega = g \\
+\frac{1}{2} & \text{for } \omega = b
+\end{cases}
+$$
