@@ -54,3 +54,58 @@ S_1(\omega) =
 \frac{1}{2} & \text{for } \omega = b
 \end{cases}
 $$
+
+Now we introduce a third financial instrument in our model, an option on the stock with strike price $K$: the buyer
+the option has the right - but not the obligation - to buy one stock at time $t=1$ at a predefined price $K$. To fix 
+ideas let $K=1$. A moment's reflexion reveals that the price $C_1$ of the option at time $t=1$ (where $C$ stands for 
+"call") equals
+
+$$
+C_1=(S_1 - K)_{+},
+$$
+
+i.e., in our simple example
+
+$$
+C_1(\omega) = 
+\begin{cases}
+1 & \text{for } \omega = g \\
+0 & \text{for } \omega = b.
+\end{cases}
+$$
+
+Hence we know the value of the option at time $t=1$, contingent on the value of the stock. But what is the price of the 
+option today?
+
+The classical approach, used by actuaries for centuries, is to price contingent claims by taking expectations. In our 
+example this gives the value $C_0 := \textbf{E}[C_1]=1/2$. Although this simple approach is very successful in many 
+actuarial applications, it is not at all satisfactory in the present context. Indeed, the rationale behind taking the 
+expected value is the following argument based on the law of large numbers: in the long run the buyer of an option will
+neither gain nor lose in the average. We rephrase this fact in a more financial lingo: the performance of an investment 
+into the option would in averae equal the performance of the bond (for which we have assumed an interest rate equal to 
+zero). However, a basic feature of finance is that an investment into a risky asset should in average yield a better 
+performance than an investment into the bond (for the sceptical reader: at least, these two values should not necessarily 
+coincide). In our "toy example" we have chosen the numbers such that $\textbf{E}[S_1]=1.25>1=S_0$, so that in average
+the stock performs better than the bond. This indicates that the option (which clearly a risky investment) should not 
+necessarily have the same performance (in average) as the bond. It also shows that the old method of calculating prices via 
+expectation is not directly applicable. It already fails for the stock and hence there is no reason why the price of the 
+option should be given by its expectation $\textbf{E}[C_1]$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
