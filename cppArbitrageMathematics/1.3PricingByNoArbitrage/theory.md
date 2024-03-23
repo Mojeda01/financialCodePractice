@@ -114,4 +114,17 @@ on a filtered probability space $(\Omega, (\mathcal{F}_t)_{0\le t \le T},\textbf
 statement essentially holds true. For any "contingent claim" $C_T$, i.e., an $\mathcal{F}_T$-measure
 random variable, the formula:
 
+$$
+C_0=\textbf{E}_{\textbf{Q}}[C_{\mathcal{T}}]
+$$
 
+yields precisely the arbitrage-free prices for $C_{\mathcal{T}}$, when $\textbf{Q}$ runs through the 
+probability measures on $\mathcal{F}_T$, which are equivalent to $\textbf{P}$ and under which the 
+process $S$ is a martingale ("equivalent martingale measures"). In particular, when there is 
+precisely one equivalent martingale measure (as it is the case in the Cox-Ross-Rubinstein, the 
+Black-Scholes and the Bachelier model), formula (1.5) gives the unique arbitrage free price $C_0$ for 
+$C_T$. In this case we may "replicate" the contingent claim $C_T$ as
+
+$$
+C_T=C_0 + \int
+$$
