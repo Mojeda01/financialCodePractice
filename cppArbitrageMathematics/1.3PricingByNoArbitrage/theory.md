@@ -90,3 +90,22 @@ calculation reveals that the probability measure defined by $\textbf{Q}[g]=1/3$ 
 $\textbf{Q}[b]=2/3$ is the unique solution satisfying $\textbf{E}_{\textbf{Q}}[S_1]=S_0=1$. Mathematically
 speaking, the process $S$ is a martingale under $\textbf{Q}$, and $\textbf{Q}$ is a martingale measure for 
 $S$.
+
+Speaking again economically, it is not unreasonable to expect that in a world governed by $\textbf{Q}$,
+the recipe of taking expected values should indeed give a price for the option which is compatible with the 
+no-arbitrage principle. After all, our original objection, that the average performance of the stock and the 
+bond differ, now has disappeared. A direct calculation reveals taht in our "toy example" these two prices
+for the option indeed coincide as
+
+$$
+\textbf{E}_{\textbf{Q}}[C_1]=1/3.
+$$
+
+Clearly we suspect that this numerical match is not just a coincide. At this stage it is, of course, the 
+reflex of every mathematician to ask: what is precisely going on behind this phenomenon? A preliminary
+answer is that the expectation under the new measure $\textbf{Q}$ defines a linear function of the span 
+of $B_1$ and $S_1$. The price of an element in this span should therefore be the corresponding linear 
+combination of the prices at time $0$. Thus, using simple linear algebra, we get $C_0=2/3$S_0=-1/3B_0$ 
+and moreover we identify this as $\textbf{E}_{\textbf{Q}}[C_1]$.
+
+
