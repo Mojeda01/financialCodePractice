@@ -126,5 +126,41 @@ Black-Scholes and the Bachelier model), formula (1.5) gives the unique arbitrage
 $C_T$. In this case we may "replicate" the contingent claim $C_T$ as
 
 $$
-C_T=C_0 + \int
+C_T=C_0 + \int^T_0 H_t dS_t,
 $$
+
+where $(H_t)_{0\le t \le T}$ is a predictable process (a "trading strategy") and where $H_t$
+models the holding in the stocks $S$ during the infinitesimal interval $[t,t+dt]$.
+
+Of course, the stochastic integral appearing in (1.6) needs some care; fortunately people like $K$.
+Ito and P.A. Meyer's sschool of probability in Strasbourg told us very precisely how to interpret such 
+an integral.
+
+The mathematical challenge of the above story consisting of getting rid of the word "essentially" and to 
+turn this program into preceise theorems.
+
+The central piece of theory relating the no-arbitrage arguments with martingale theory is the so-called 
+Fundamental Theorem of Asset Pricing. We quote a general version of this theorem, which is proved in
+Chap. 14.
+
+### Theorem 1.6.1 (Fundamental Theorem of Asset Pricing) For an $R^d$ - valued semi-martingale $S=(S_t)_{0\le t \le T}$:
+
+1.  There exists a probability measure $\textbf{Q}$ equivalent to $\textbf{P}$ under which $S$ is a 
+    sigma-martingale.
+
+2.  $S$ does not permit a free lunch with vanishing risk.
+
+This theorem was proved for the case of a probability space $\Omega$ consisting of finitely many elements by 
+Harrison and Pliska. In this case one may equivalently write no-arbitrage instead of no free lunch with 
+vanishing risk and martingale instead of sigma-martingale.
+
+In the general case it is unavoidable to speak about more technical concepts, such as sigma-martingales
+(which is a generalisation of the notion of a local martingale) and free lunches. A free lunch (a notion 
+introduced by D. Kreps is something like an arbitrage, where - roughly speaking - agents are allowed 
+to form integrals as in (1.6), to subsequently "throw away money" (if they want to do so), and finally 
+to pass to the limit in an appropriate topology. It was the - somewhat surprising - insight of [DS 94]
+that one may take the topology of uniform convergence (whuch allows for an economic intepreration to which
+the term "with vanishing risk" alludes) and still get a valid theorem.
+
+The remainder of this book is devoted to the development of this theme, as well a to its remarkable 
+scope of applications in Finance.
