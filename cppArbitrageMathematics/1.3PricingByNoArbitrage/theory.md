@@ -108,4 +108,10 @@ of $B_1$ and $S_1$. The price of an element in this span should therefore be the
 combination of the prices at time $0$. Thus, using simple linear algebra, we get $C_0=2/3$S_0=-1/3B_0$ 
 and moreover we identify this as $\textbf{E}_{\textbf{Q}}[C_1]$.
 
+## 1.6 The Fundamental Theorem of Asset Pricing
+To make a long story very short: for a general stochastic process $(S_t)_{0\le t \le T}$, modelled 
+on a filtered probability space $(\Omega, (\mathcal{F}_t)_{0\le t \le T},\textbf{P})$, the following 
+statement essentially holds true. For any "contingent claim" $C_T$, i.e., an $\mathcal{F}_T$-measure
+random variable, the formula:
+
 
