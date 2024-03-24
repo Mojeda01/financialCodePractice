@@ -36,5 +36,5 @@ theorem in finite dimensional spaces.
                                     include tools and theorems from measure theory, topology, and functional
                                     spaces that are used in more advanced settings.
 
-4.  **Linear Spaces and the Hahn-Banach Theorem**:  They suggest
+4.  **Linear Spaces and the Hahn-Banach Theorem**:  They suggest that for the finite case they are considering
 
