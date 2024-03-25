@@ -43,3 +43,31 @@ which, as we shall see, will make life much easier.
                             assume that the zero coordinate $\hat{S}_0$ satisfies
                             $\hat{S}^0_t>0$ for all $t=0,...,T$ and $\hat{S}^0_0=1$.
 
+The interpretation is the following. The prices of the assets $0,...,d$ are measured in a fixed 
+money unit, say Euros. For $1 \le j \le d$ they are not necessarily non-negative (think, e.g.
+of forward contracts). The asset 0 plays a special role. It is supposed to be strictly positive
+and will be used as a numeraire. It allows us to compare money (e.g., Euros) at time 0 to money 
+at time $t>0$. In many elementary models, $\hat{S}^0$ is simply a bank account which in case 
+of constant interest $r$ is then defined as $\hat{S}^0=e^{rt}$. However, it might also be 
+more complicated, e.g., $\hat{S}^0_t=(r_0h+r_1h+...+r_{t-1}h)$ where $h>0$ is the length of the 
+time interval between $t-1$ and $t$ (here kept fixed) and where $r_{t-1}$ is the stochastic
+interest rate valid between $t-1$ and $t$. Other models are also possible and to prepare the 
+reader for more general situations, we only require $\hat{S}^0_t$ to be strictly positive.
+Notie that we only require that $\hat{S}^0_t$ to be $\mathcal{F}_t$-measurable and that it is
+not necessarily $\mathcal{F}_{t-1}$ measurable. In other words, we assume that the process
+$\hat{S}^0=(\hat{S}^0_{t})^T_{t=0}$ is adapted, but not necessarily predictable.
+
+An economic agent is able to buy and sell financial assets. The decision taken at time $t$
+can only use information available at time $t$ which is modelled by the $\sigma$-algebra
+$\mathcal{F}_t$.
+
+-   **Definition 2.1.2.**:  A trading strategy $(\hat{H})^T_{t=0}=(\hat{H}_t^0,
+                            \hat{H}^1_t,...,\hat{H}^d_t)^T_{t=1}$ is an $\mathbb{R}^{d+1}$-
+                            valued process which is predictable, i.e. $\hat{H}_t$ is
+                            $\mathcal{F}_{t-1}$ measurable.
+
+The interpretation is that between time $t-1$ and time $t$, the agent holds a quantity
+equal to $\hat{H}^j_t$ of asset $j$. The decision is taken at time $t-1$ and therefore,
+$\hat{H}_t$ is required to be $\mathcal{F}_{t-1}$-measurable.
+
+
