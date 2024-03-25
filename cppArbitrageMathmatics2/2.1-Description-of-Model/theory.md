@@ -127,4 +127,4 @@ for dropping the 0'th coordinate is, as we shall discover in a moment, that the 
 numeraire asset $S^0_t$ will be no longer of importance when do the book-keeping in terms of the 
 numeraire asset, i.e., in discounted terms.
 
-
+One can make the following easy, but crucial observation: for every
