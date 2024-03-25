@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Partial Derivatives}
+
+\begin{document}
+\maketitle
+\clearpage
+
+In the realms of calculus, a derivative is a fundamental concept that represents the rate at which a function
+changes at any given point. It is the mathematical embodiment of the notion of instantaneous velocity,
+capturing how a quantity varies with respect to change in another quantity. Formally, if we consider a 
+real-valued $f$ defined on an interval in the real line, the derivative of $f$ at a point $a$ within this
+interval, denoted as $f'(a)$, is defined as the limit:
+
+$$
+f'(a)=\text{lim}_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}
+$$
+
+Providing that this limit exist. This definition encapslates the idea of the slope of the tangent line to
+the graph of the function $f$ at the point $a$, thus providing a geometric interpretation of the 
+derivative.
+
+When the function under scrutiny depends on multiple variables, the concept of the derivative generalizes
+to partial derivatives. A partial derivative of a function of several variables is its derivative with
+respect to one of those variables, with the others held constant. If $f$ is a function of $x$ and $y$, then 
+the partial derivative of $f$ with respect to $x$ at the point $(a,b)$, denoted as 
+$\frac{\partial f}{\partial x}(a,b)$, is defined as:
+
+$$
+\frac{\partial f}{\partial x}(a, b) = \text{lim}_{h \leftarrow 0} \frac{f(a+h,b)-f(a,b)}{h}
+$$
+
+Analogously, the partial derivative with respect to $y$ is defined by:
+
+$$
+\frac{\partial f}{\partial y}(a, b) = \text{lim}_{h->0}\frac{f(a, b+h)}{h}
+$$
+
+These definitions reflect the rate of change of the function $f$ in the direction of each coordinate
+axis. In the same spirit as the derivative in one dimension, partial derivatives in multiple
+dimensions can be interpreted as the slopes of the tangent plane to the surface defined by the function
+$f(x,y)$ at the point $(a,b)$
+
+Consider the function $f(x,y)=x^2y+3xy^2$. The partial derivative of $f$ with respect to $x$ is computed
+by differentiating $f$ with respect to $x$ while treating $y$ as a constant:
+
+$$
+\frac{\partial f}{\partial x} = 2xy + 3y^2
+$$
+
+Similarly, differentiating $f$ with respect to $y$ while holding $x$ constant yields:
+
+$$
+\frac{\partial f}{\partial y} = x^2 + 6xy
+$$
+
+These expressions quantify the gradient of $f$ in the directions of the $x$-axis and $y$-axis,
+respectively.
+
+In mathematical analysis, the concepts of the derivative and partial derivative serve as cornerstones
+for differential calculus, enabling the examination of functions and their behaviors in both 
+one-dimensional and multidimensional spaces. These constructs underpin numerous applications across 
+diverse scientific disciplines, including physics, engineering, and economics, where they facilitate
+the modeling and analysis of dynamic systems and the exploration of rates of change and slopes of 
+functions.
+
+\end{document}
