@@ -95,7 +95,9 @@ The $\mathcal{F}_t$-measureable random variable defined in (2.1) is interpreted 
 portfolio at time $t$ defined by the trading strategy $\hat{H}$:
 
 $$
-\hat{V}_t = (\hat{H}_t,\hat{S}_t)=(\hat{H}_{t+1},\hat{S}_t).
+
+\hat{V}_t = (\hat{H}_t,\hat{S}_t)=(\hat{H}_{t+1},\hat{S}_t)
+
 $$
 
 The way in which the value $(\hat{H}_t_\hat{S}_t)$ evolves can be described much easier when we use
