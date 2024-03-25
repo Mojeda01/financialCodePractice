@@ -86,4 +86,27 @@ $$
 The initial investment required for a strategy is $\hat{V}_0=(\hat{H}_1,\hat{S}_0)=
 \sum^d_{j=0} \hat{H}^j_1 \hat{S}^j_0$.
 
-The interpretation goes as follows.
+The interpretation goes as follows. By changing the portfolio from $\hat{H}_{t-1}$ to $\hat{H}_t$
+there is no input/output flow of money. We remark that we assume that changing a portfolio does not 
+trigger transaction costs. Also note that $\hat{H}^j_t$ may assume negative values, which corresponds
+to short selling asset $j$ during the time interval $[t_{j-1}, t_j]$.
+
+The $\mathcal{F}_t$-measureable random variable defined in (2.1) is interpreted as the $\hat{V}_t$ of the 
+portfolio at time $t$ defined by the trading strategy $\hat{H}$:
+
+$$
+\hat{V}_t = (\hat{H}_t,\hat{S}_t)=(\hat{H}_{t+1},\hat{S}_t).
+$$
+
+The way in which the value $(\hat{H}_t_\hat{S}_t)$ evolves can be described much easier when we use
+discounted prices using the asset $\hat{S}^0$ as numeraire. Discounting allows us to compare money at 
+time $t$ to money at time 0. For instance we could say that $\hat{S}^0_t$ units of money at time $t$
+are the "same" as 1 unit of money, e.g., Euros, at time $0$. So let us see what happens if we replace prices
+$\hat{S}$ by discounted prices $\frac{\hat{S}}{\hat{S}^0}=(\frac{\hat{s}}{\hat{S}_0},
+\frac{\hat{s}^1}{\hat{s}^0},...,\frac{\hat{S}^d}{\hat{S}^0})$. We will use the notation
+
+$$
+S^j_t := \frac{\hat{S}^j_t}{\hat{S}^0_t}, \text{for } j=1,...,d \text{ and } t=0,...,T.
+$$
+
+
