@@ -110,5 +110,21 @@ S^j_t := \frac{\hat{S}^j_t}{\hat{S}^0_t}, \text{for } j=1,...,d \text{ and } t=0
 $$
 
 There is no need to include the coordinate 0, since obviously $S^0_t=1$. Let us now consider
-$(\hat{H}_t)^T_{t=1}=(\hat{H}^0_t,\hat{H}^1_t,...,\hat{H}^d_t)^T_{t=1}$ to be a self-financing strategy
-with initial investment $\hat{V_0}$;
+$(\hat{H_t})^T_{t=1}=(\hat{H^0_t},\hat{H^1_t},...,\hat{H^d_t})^T_{t=1}$ to be a self-financing strategy
+with inital investment $\hat{V_0}$, we then have
+
+$$
+\hat{V_0}=\sum^d_{j=0}\hat{H_1^j}\hat{S^j_0}=\hat{H_1^0}+\sum^d_{j=1}\hat{H^j_1}\hat{S^j_0}
+= \hat{H^0_1} + \sum^d_{j=0} \hat{H_1^j} \hat{S_0^j}
+$$
+
+since by definition $\hat{S^0_0}=1$.
+
+We now write $(H_t)^T_{t=1} = (H^1_t,...,H^d_t)^T_{t=1}$ for the $\mathbb{R}^d$-valued process obtained 
+by discarding the $0$'th coordinate of the $\mathbb{R}^{d+1}$-valued process $(\hat{H_t})^T_{t=1}=
+(\hat{H^0_t}, \hat{H^1_t},...,\hat{H}^d_t)^T_{t=1}$, i.e., $H^j_t=\hat{H^j_t}$ for $j=1,...,d$. The reason
+for dropping the 0'th coordinate is, as we shall discover in a moment, that the holdings $\hat{H^0_t}$ in the
+numeraire asset $S^0_t$ will be no longer of importance when do the book-keeping in terms of the 
+numeraire asset, i.e., in discounted terms.
+
+
