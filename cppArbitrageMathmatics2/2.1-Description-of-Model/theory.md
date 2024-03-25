@@ -70,4 +70,20 @@ The interpretation is that between time $t-1$ and time $t$, the agent holds a qu
 equal to $\hat{H}^j_t$ of asset $j$. The decision is taken at time $t-1$ and therefore,
 $\hat{H}_t$ is required to be $\mathcal{F}_{t-1}$-measurable.
 
+**Definition 2.1.3.** A strategy $(\hat{H}_t)^T_{t=1}$ is called self-financing if for every 
+$t=1,...,T-1$ we have
 
+$$
+\Big( \hat{H}_t, \hat{S}_t \Big) = \Big( \hat{H}_{t+1}, \hat{S}_t \Big
+$$
+
+or, written more explicitly
+
+$$
+\sum^d_{j=0}\hat{H}^j_t\hat{S}^j_t = \sum^d_{j=0} \hat{H}^j_{t+1} \hat{S}^j_t.
+$$
+
+The initial investment required for a strategy is $\hat{V}_0=(\hat{H}_1,\hat{S}_0)=
+\sum^d_{j=0} \hat{H}^j_1 \hat{S}^j_0$.
+
+The interpretation goes as follows.
