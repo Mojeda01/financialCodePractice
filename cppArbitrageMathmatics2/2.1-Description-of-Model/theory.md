@@ -109,4 +109,6 @@ $$
 S^j_t := \frac{\hat{S}^j_t}{\hat{S}^0_t}, \text{for } j=1,...,d \text{ and } t=0,...,T.
 $$
 
-
+There is no need to include the coordinate 0, since obviously $S^0_t=1$. Let us now consider
+$(\hat{H}_t)^T_{t=1}=(\hat{H}^0_t,\hat{H}^1_t,...,\hat{H}^d_t)^T_{t=1}$ to be a self-financing strategy
+with initial investment $\hat{V_0}$;
