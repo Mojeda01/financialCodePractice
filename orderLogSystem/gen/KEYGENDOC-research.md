@@ -100,3 +100,112 @@ the Crypto++ library with your program.
 
 This will print out the SHA-256 hash of "Hello, world!" in hexadecimal format. The crypto++ library is powerful and flexible, but it can be complex because it offers so much functionality. It's
 a good idea to read the documentation and understand the basics of cryptographic primitives before using them in a production environment.
+
+### OpenSSL - Cryptography and SSL/TLS Toolkit
+OpenSSL works by implementing a wide range of cryptographic algorithms used in various Internet standards, including symmetric 
+encryption, public key cryptography, key agreement, and more. It uses a library 'libcrypto' for these implementations. When using 
+OpenSSL in a project, you typically perform operations like encryption or hashing through high-level API functions, such as those 
+provided by the 'EVP' interface. These functions abstract the underlying cryptographic algorithms and allow for flexible use of 
+different algorithms with minimal changes to your code.
+
+For a practical implementation, you would start b choosing the appropriate cryptographic algorithm for your needs (e.g., AES for 
+encryption, SHA256 for hashing) and then use the corresponding OpenSSL functions to perform the operation. For example, to
+encrypt data, you would use functions like 'EVP_EncryptInit_ex', 'EVP_EncryptUpdate', and 'EVP_EncryptFinal_ex', providing them 
+with your data and encryption keys. Similarly, for hasing you would use 'EVP_DigestInit_ex', 'EVP_DigestUpdate', and 'EVP_Digestfinal_ex'.
+
+You would also need to handle key generation, management, and potentially the use of hardware security module (HSM) for storing 
+cryptographic keys securely. OpenSSL supports a variety of key management techniques, including the use of PEM files for storing 
+keys and certificates.
+
+To get started with OpenSSL in your project, refer to the official OpenSSL documentation for detailed guidance on using its APIs 
+and implementing cryptographic functions securely: OpenSSL Crypto Documentation - https://www.openssl.org/docs/man3.0/man7/crypto.html.
+
+Here's a complete example demonstrating basic encryption and decryption using OpenSSL's AES algorithm in C++. This code snippet
+performs AES-256-CBC encryption and decryption of a string.
+
+```#include <iostream>
+#include <openssl/evp.h>
+#include <openssl/err.h>
+#include <vector>
+#include <string>
+
+class SimpleAES {
+public:
+    SimpleAES(const std::vector<unsigned char>& key, const std::vector<unsigned char>& iv) : key(key), iv(iv) {}
+
+    std::vector<unsigned char> encrypt(const std::string& plaintext) {
+        EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
+        std::vector<unsigned char> ciphertext(plaintext.size() + AES_BLOCK_SIZE);
+        int len;
+        int ciphertext_len;
+
+        if(!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key.data(), iv.data())) {
+            // Handle errors
+        }
+
+        if(!EVP_EncryptUpdate(ctx, ciphertext.data(), &len, reinterpret_cast<const unsigned char*>(plaintext.data()), plaintext.size())) {
+            // Handle errors
+        }
+        ciphertext_len = len;
+
+        if(!EVP_EncryptFinal_ex(ctx, ciphertext.data() + len, &len)) {
+            // Handle errors
+        }
+        ciphertext_len += len;
+        ciphertext.resize(ciphertext_len);
+
+        EVP_CIPHER_CTX_free(ctx);
+
+        return ciphertext;
+    }
+
+    std::string decrypt(const std::vector<unsigned char>& ciphertext) {
+        EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
+        std::vector<unsigned char> plaintext(ciphertext.size());
+        int len;
+        int plaintext_len;
+
+        if(!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key.data(), iv.data())) {
+            // Handle errors
+        }
+
+        if(!EVP_DecryptUpdate(ctx, plaintext.data(), &len, ciphertext.data(), ciphertext.size())) {
+            // Handle errors
+        }
+        plaintext_len = len;
+
+        if(!EVP_DecryptFinal_ex(ctx, plaintext.data() + len, &len)) {
+            // Handle errors
+        }
+        plaintext_len += len;
+        plaintext.resize(plaintext_len);
+
+        EVP_CIPHER_CTX_free(ctx);
+
+        return std::string(plaintext.begin(), plaintext.end());
+    }
+
+private:
+    std::vector<unsigned char> key;
+    std::vector<unsigned char> iv;
+};
+
+int main() {
+    std::vector<unsigned char> key = {/* 32 bytes AES key */};
+    std::vector<unsigned char> iv = {/* 16 bytes AES IV */};
+    SimpleAES aes(key, iv);
+
+    std::string plaintext = "Hello, OpenSSL AES!";
+    auto ciphertext = aes.encrypt(plaintext);
+    std::string decryptedText = aes.decrypt(ciphertext);
+
+    std::cout << "Original: " << plaintext << std::endl;
+    std::cout << "Decrypted: " << decryptedText << std::endl;
+
+    return 0;
+}
+
+```
+
+In this example, 'SimpleAES' is a class that encapsulates AES encryption and decryption functionalities using OpenSSL. Remember to replace the placeholder 'key' and 'iv' with your actual encryption key and initialization vector, and ensure you have installed
+OpenSSL and linked it properly with your C++ project. This example skips over complexities, such as error handling and key management, which are critical in real-world applications.
